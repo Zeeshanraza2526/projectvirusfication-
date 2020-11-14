@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body
+      {
+          background-image:url(D:\html\123.jpg);
+          background-attachment:fixed;
+          background-repeat:no-repeat;
+          margin:0;
+          padding:0;
+          } 
+      #main
+          {
+              display:block;
+              width:100%;
+             /* height:560px;*/
+              background-color:;
+              
+              /*margin-top:-143px;
+              */}
+      #nav
+      {
+          width:300px;
+         height:500px;
+        /* margin-top:-643px;
+         */background-color:Gray;
+         box-shadow:0px 0px 40px black; 
+          }        
+      #container
+      {
+         width:1236px;
+         height:500px;
+         margin-top:-101px;
+         margin-left:300px; 
+         background-color:black;
+         position:inherit;
+          } 
+      #map {
+        height: 100%;
+        width: 100%;
+        display:none;
+       }
+    </style>
+    <script>
+        function myFunction() {
+            document.getElementById('map').style.display = "block";
+        }
+        function myFunction1() {
+            var abc=document.getElementById('opt').value;
+            document.getElementById('btn').innerHTML = abc;
+            redraw({message:{lat:24.9219,lng:67.0941}});
+        }
+
+    </script>
+  </head>
+  <body>
+    <div style="width:100%;height:50px;background-color:red;margin-top:-18.5px;">
+    <h3><span style="color:white;font-family:@GulimChe;font-size:35px;margin-bottom:-50px;">My Google Maps Demo:</span></h3>
+    </div>
+    <div id="main">
+    <div id="nav">
+    <div>
+    <select style="margin-left:50px;margin-top:50px;width:200px;height:25px;border-radius:10px 10px 0px 0px;" id="opt" onclick="myFunction1()">
+    <option value="malircantt">malir cantt</option>
+    <option value="shahfaisal">shah faisal town</option>
+    </select></br>
+    <button style="width:200px;height:25px;border-radius:0px 0px 10px 10px;margin-left:50px;background-color:red;margin-top:0px" onclick="myFunction()" id="btn">-------</button>
+    </div>
+    <div><!---
+    <img src="C:\Users\pc\Desktop\line2.png" style="margin-left:130px;margin-top:-50px;height:500px;">--->
+    </div>
+    <div id="container">
+    <div id="map"></div>
+    <script>
+	window.lat = 24.9596;
+    window.lng = 67.2252;
+    var map;
+    var marker;
+    var lineCoords = [];
+	
+      function initMap() {
+        var uluru = {lat: window.lat, lng: window.lng};
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+		lineCoords.push(new google.maps.LatLng(window.lat, window.lng));
+		
+      }
+	  
+	  var redraw = function(payload) {
+      lat = payload.message.lat;
+      lng = payload.message.lng;
+      map.setCenter({lat:lat, lng:lng, alt:0});
+      marker.setPosition({lat:lat, lng:lng, alt:0});
+      lineCoords.push(new google.maps.LatLng(lat, lng));
+      var lineCoordinatesPath = new google.maps.Polyline({
+        path: lineCoords,
+        geodesic: true,
+        strokeColor: '#2E10FF'
+      });
+      
+      lineCoordinatesPath.setMap(map);
+    };
+	  
+	  
+	  
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBobIRdhYfkBS67VoQSaAbGMWKdgVGbeQs&callback=initMap">
+    </script>
+    </div>
+    </div>
+    </div>
+  </body>
+</html>
