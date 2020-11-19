@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FLOATS&CLEAR</title>
+<style>
+#body
+{
+    background-color:#333;
+}
+
+#container
+{
+    background-image: url("sky.jpg");
+    padding: 20px;
+    margin: 0 auto;
+    width: 60%;
+    color: white;
+    font-family: monospace;
+}
+
+img
+{
+    float: left;
+    height: 190px;
+    margin: 0px 10px 10px 0px;
+
+}
+
+#bottompara
+{
+    clear: both;
+}
+
+#container2
+{
+    background-image: url("sky.jpg");
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 60%;
+    color: white;
+    font-family: monospace;
+}
+
+#mainbar{
+    width: 400px;
+    float: left;
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+#sidebar{
+    width: 330px;
+    padding: 10px;
+    float: right;
+    background-color: darkgrey;
+    margin-bottom: 20px;
+}
+
+.clearFix::after
+{
+ content: "";
+ display: table;
+ clear: both;
+}
+
+#footer
+{
+    width: 98%;
+    background-color:black;
+    color: white;
+    padding: 10px;
+    clear: both;
+    margin: 20px 0px;
+}
+
+.para
+{
+    background-color: darkgrey;
+}
+</style>    
+</head>
+<body id="body">
+    <div id="container">
+       <h1>Me And My Mind</h1><hr>
+       <img src="model.jpg"/>
+       <p class="para">It's me Taimoor & it's all about my mind.</p>
+       <p class="para">Yeah i have been loved by lot of peoples and most importantly by my mother and father. My father! he is a
+           nice man sometime he gets angry but for sure that is all because he wants his childs to be responsible
+           and he like all other fathers want to see his kids successfull his daughters have done so well in studies
+           and also when it comes to work they doing excellent with the carrier. But when he look at us i mean his
+           sons he get disappointed i guess especially with me because obviously i am his eldest son and i know  
+           he is disappointed with me and he must be and the reason is i am doing nothing in life. Everything
+           he gave us never made an excuse and here i am playing with my own life. It's not like that i love whatever
+           i am doing its just that i lost the track.  
+       </p><hr>
+        <p id="bottompara" class="para"> 
+         And my mother she is one of the finest lady whatever i do she always take care of me and i think thats the
+         best part of mother <strong>"LOVE"</strong>. Taking care of the family do whatever she can to make the home
+         the best place. Everyone say they love their mother but the way she love her family u can't imagine it.    
+    </p>
+    </div>
+
+    <div id="container2" class="clearFix">
+            <div id="mainbar">
+            <p>
+                So what should be done by me is to also takecare of them love them understand my responsibilities
+                but here i am ruining my life just for the sake of enjoyment i have no i idea that how harmfull
+                it can be for me and for my family. Then the question arise that why i just dont get rid from all
+                that? so it's not that easy. Everytime i tried i failed it's the fuckin mind so powerfull that 
+                it wont let me allow to guide my own self.
+            </p>
+            </div>
+            <div id="sidebar">
+             <p>
+                 I want to get rid of everything i need a break really maybe from the life i dont want to live like
+                 that. I myself think that there is alot to find out my reason to be here why he sent me in this
+                 forbidden world there must be a reason a good reason not that what i am into rightnow. It's all
+                 so disturbing not a single thing make sense to me i want my life to be better lot than the one
+                 i am living i want control over my mind not that my mind control me i want to learn how to do that 
+                 i dont want to die by doing nothing but just things which make no sense.
+             </p>
+             <p>
+                 I wonder sometime how stupid we are that we just do things which we just want to either for lust
+                 or to make ourself the outer self happy why we dont get that what our soul want from us.
+             </p>
+            </div>  
+            <div id="footer">
+                <p>Blog created by <strong>SYED TAIMOOR HASAN</strong> at 
+                <time datetime="19-5-2019">22<sup>th</sup>- May - 2019</time></p>
+
+            </div>
+         </div>   
+</body>
+</html>
