@@ -56,7 +56,7 @@ if (!isset($_SESSION['username'])) {
                            <li><a href=".html">Symptoms Checker</a></li>
                            <li><a href="https://www.facebook.com/IntelBot-108875797526008">IntelBot</a></li>
                            <li><a href="videos.html">Videos</a></li>
-                           <li><a href="pictures.html">Pictures</a></li>
+                           <li><a href="pictures.html"></a></li>
                            
                        </ul>
                    </li>
